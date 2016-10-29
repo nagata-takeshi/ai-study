@@ -1,0 +1,27 @@
+{
+  "name": "trial",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagata-takeshi/ai-study.git"
+  },
+  "keywords": [
+    "Snow0186"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nagata-takeshi/ai-study/issues"
+  },
+  "homepage": "https://github.com/nagata-takeshi/ai-study#readme",
+  "dependencies": {
+    "botbuilder": "^3.4.0",
+    "restify": "^4.2.0"
+  }
+}
