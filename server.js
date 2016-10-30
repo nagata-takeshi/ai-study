@@ -46,9 +46,7 @@ bot.dialog('/', intents);
 intents
      .matches('price-forecastiong', function (session, args) {
         var syouhin = builder.EntityRecognizer.findEntity(args.entities, '商品');
-        session.send("はい、" + syouhin + "の価格予測ですね");
+        session.send("はい価格予測ですね");
      })
-
-
 
 
