@@ -43,7 +43,7 @@ var intents = new builder.IntentDialog({
 bot.dialog('/', intents);
 
 intents
-     .matches('price-forecastion', function (session, args) {
+     .matches('price-forecastiong', function (session, args) {
         var syouhin = builder.EntityRecognizer.findEntity(args.entities, '商品');
         session.send(syouhin + "の価格予測ですね");
      })
