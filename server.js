@@ -19,8 +19,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 //});
 //var bot = new builder.UniversalBot(connector);
 
-var bot = new builder.BotConnectorBot({appId: process.env.MICROSOFT_APP_ID, 
-appPassword: process.env.MICROSOFT_APP_PASSWORD});
+var bot = new builder.BotConnectorBot({appId: process.env.APP_ID, 
+appSecret: process.env.APP_SECRET);
 
 var url = 'https://api.projectoxford.ai/luis/v1/application?id=' + process.env.LUIS_ID 
         + '&subscription-key=' + process.env.LUIS_SUBSCRIPTION_KEY
