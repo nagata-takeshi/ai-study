@@ -33,12 +33,12 @@ server.post('/api/messages', connector.listen());
 // Bots Dialogs
 //=========================================================
 
-//bot.dialog('/', function (session) {
-//    session.send("Hello World update");
-//});
+bot.dialog('/', function (session) {
+    session.send("Hello World update");
+});
 
 
-bot.add('/', dialog);
+//bot.add('/', dialog);
 
 //dialog.on('price-forecastiong', function(session, args){
 //   consol.log('message:');
