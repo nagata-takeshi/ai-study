@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/nagata-takeshi/ai-study#readme",
   "dependencies": {
-    "botbuilder": "^3.4.0",
+    "botbuilder": "^3.4.2",
     "restify": "^4.2.0"
   }
 }
