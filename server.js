@@ -27,15 +27,15 @@ var url = 'https://api.projectoxford.ai/luis/v1/application?id=' + process.env.L
 
 
 
-//server.post('/api/messages', connector.listen());
+server.post('/api/messages', connector.listen());
 
 //=========================================================
 // Bots Dialogs
 //=========================================================
 
-//bot.dialog('/', function (session) {
-//    session.send("Hello World update");
-//});
+bot.dialog('/', function (session) {
+    session.send("Hello World update");
+});
 
 
 //bot.add('/', dialog);
