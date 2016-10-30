@@ -19,8 +19,8 @@ var connector = new builder.ChatConnector({
 });
 var bot = new builder.UniversalBot(connector);
 
-var url = 'https://api.projectoxford.ai/luis/v1/application?id=' + process.env.LUIS_ID 
-        + '&subscription-key=' + process.env.LUIS_SUBSCRIPTION_KEY;
+//var url = 'https://api.projectoxford.ai/luis/v1/application?id=' + process.env.LUIS_ID 
+//        + '&subscription-key=' + process.env.LUIS_SUBSCRIPTION_KEY;
 
 
 //var dialog = new builder.LuisDialog(url);
