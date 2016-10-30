@@ -27,7 +27,7 @@ var dialog = new builder.LuisDialog(url);
 
 
 
-server.post('/api/messages', connector.listen());
+//server.post('/api/messages', connector.listen());
 
 //=========================================================
 // Bots Dialogs
@@ -38,14 +38,14 @@ server.post('/api/messages', connector.listen());
 //});
 
 
-bot.add('/', dialog);
+//bot.add('/', dialog);
 
-dialog.on('price-forecastiong', function(session, args){
-   consol.log('message:');
-   consol.log(session.message);
+//dialog.on('price-forecastiong', function(session, args){
+//   consol.log('message:');
+//   consol.log(session.message);
 
-   session.send('price-forecastiong!!');
-});
+//   session.send('price-forecastiong!!');
+//});
 
 
 
