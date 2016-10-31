@@ -53,7 +53,7 @@ intents
      .matches('price-forecastiong', function (session, args) {
         var syouhin = builder.EntityRecognizer.findEntity(args.entities, '商品');
         if (syouhin) {
-            session.send(syouhin.entity + "の市場価格ですね");
+            session.send(syouhin.entity + "の市場\n価格ですね");
         } else {
             session.send("test");
         }
