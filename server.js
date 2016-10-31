@@ -66,7 +66,7 @@ intents
               var options = {
                   url: 'https://ussouthcentral.services.azureml.net/workspaces/ad3872017e32497e8ee877d6011ca157/services/06bfe516cd9247eb828b16cef814664a/execute?api-version=2.0&details=true',
                   method: 'POST',
-                  headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer rfpRykhDtQ9hmPFvidOHlXPW9Me61diB+VzXFy1Q9kU5JJv86qZB3sMoz3E35M0PCK4KB0CEzBJfPmNtYhWSFw==', 'Content-Length': 400 },
+                  headers: {'Content-Type': 'application/json', 'Authorization': ('Bearer rfpRykhDtQ9hmPFvidOHlXPW9Me61diB+VzXFy1Q9kU5JJv86qZB3sMoz3E35M0PCK4KB0CEzBJfPmNtYhWSFw==')},
                   json: {'Inputs': {'input1': {'ColumnNames': ["メーカー","燃料タイプ","ドアの数","車体形状","エンジンの場所","エンジンサイズ","値段"],'Values': [["toyota","gas","two","sedan","front","200","0"]]}},'GlobalParameters': {}}
               }
               request(options, function(error, response, body) {
