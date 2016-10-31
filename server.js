@@ -71,7 +71,7 @@ intents
               }
               request(options, function(error, response, body) {
                   session.send("responseStatusCode:");
-//                  session.send(response.statusCode);
+                  session.send("aa:" + response.statusCode);
               })
             //  session.send(syouhin.entity + "の市場価格ですね");
         } else {
