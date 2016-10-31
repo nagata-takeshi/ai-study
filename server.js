@@ -53,14 +53,14 @@ intents
      .matches('price-forecastiong', function (session, args) {
         var syouhin = builder.EntityRecognizer.findEntity(args.entities, '商品');
         if (syouhin) {
-            request.post("https://ussouthcentral.services.azureml.net/workspaces/ad3872017e32497e8ee877d6011ca157/services/06bfe516cd9247eb828b16cef814664a/execute?api-version=2.0&details=true")
-                .set('Content-Type', 'application/json')
-                .set('Authorization', 'Bearer rfpRykhDtQ9hmPFvidOHlXPW9Me61diB+VzXFy1Q9kU5JJv86qZB3sMoz3E35M0PCK4KB0CEzBJfPmNtYhWSFw==')
-                .set('Content-Length', '47')
-                .send({"Inputs": {"input1": {"ColumnNames": ["メーカー","燃料タイプ","ドアの数","車体形状","エンジンの場所","エンジンサイズ","値段"],"Values": [[“toyota",“gas",“two",“sedan",“front",“200","0"]]}},"GlobalParameters": {}})
-                .end(function(res){
-                   console.log(res);
-                });
+//            request.post("https://ussouthcentral.services.azureml.net/workspaces/ad3872017e32497e8ee877d6011ca157/services/06bfe516cd9247eb828b16cef814664a/execute?api-version=2.0&details=true")
+//                .set('Content-Type', 'application/json')
+//                .set('Authorization', 'Bearer rfpRykhDtQ9hmPFvidOHlXPW9Me61diB+VzXFy1Q9kU5JJv86qZB3sMoz3E35M0PCK4KB0CEzBJfPmNtYhWSFw==')
+//                .set('Content-Length', '47')
+//                .send({"Inputs": {"input1": {"ColumnNames": ["メーカー","燃料タイプ","ドアの数","車体形状","エンジンの場所","エンジンサイズ","値段"],"Values": [[“toyota",“gas",“two",“sedan",“front",“200","0"]]}},"GlobalParameters": {}})
+//                .end(function(res){
+//                   console.log(res);
+//                });
             session.send(syouhin.entity + "の市場価格ですね");
         } else {
             session.send("test");
