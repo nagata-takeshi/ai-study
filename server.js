@@ -70,7 +70,7 @@ intents
                   json: {'Inputs': {'input1': {'ColumnNames': ["メーカー","燃料タイプ","ドアの数","車体形状","エンジンの場所","エンジンサイズ","値段"],'Values': [["toyota","gas","two","sedan","front","200","0"]]}},'GlobalParameters': {}}
               }
               request(options, function(error, response, body) {
-                  session.send(syouhin.entity + "の市場価格(" + body.Results.output1.value.ColumnNames + ")：" + body.Results.output1.value.Values[0][7]);
+                  session.send(syouhin.entity + "の市場価格(" + body.Results.output1.value.ColumnNames + "):" + body.Results.output1.value.Values[0]);
               })
             //  session.send(syouhin.entity + "の市場価格ですね");
         } else {
