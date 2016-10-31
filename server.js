@@ -3,10 +3,10 @@ var restify = require('restify');
 var builder = require('botbuilder');
 var request = require('superagent');
 
-//request.get("http://httpbin.org/html")
-//       .end(function(res){
-//            console.log(res);
-//       });
+request.get("http://httpbin.org/html")
+       .end(function(res){
+            console.log(res);
+       });
 
 //=========================================================
 // Bot Setup
