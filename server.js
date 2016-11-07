@@ -131,6 +131,6 @@ intents.matches('isWeather',
 		}
 	}
 ])
-.onDefault(function (session) { session.endDialog("日本語でok") });
+.onDefault(function (session) { session.send("日本語でok") });
 
 
