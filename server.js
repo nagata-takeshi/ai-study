@@ -1,7 +1,7 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 var request = require('request');
-ar forecast = require('weather-yahoo-jp').forecast;
+var forecast = require('weather-yahoo-jp').forecast;
 
 //=========================================================
 // Bot Setup
