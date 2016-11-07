@@ -38,6 +38,8 @@ var intents = new builder.IntentDialog({
 //=========================================================
 
 // 初期ダイアログをintentDialogとして使用する
+bot.dialog('/', intents);
+
 intents.matches('isWeather',
     function (session, args) {
 session.send("test1");
