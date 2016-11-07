@@ -38,8 +38,6 @@ var intents = new builder.IntentDialog({
 //=========================================================
 
 // 初期ダイアログをintentDialogとして使用する
-// 初期ダイアログをintentDialogとして使用する
-process.on('uncaughtException',function(err){session.endDialog('aaa');});
 intents.matches('isWeather',
     function (session, args) {
 session.send("test1");
