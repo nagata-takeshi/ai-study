@@ -72,7 +72,7 @@ session.send("test1");
 		}
     }
 )
-.matches('getWeather', [
+.matches('getWeather', 
     function (session, args) {
 session.send("test2");
         var city = builder.EntityRecognizer.findEntity(args.entities, 'City');
@@ -105,14 +105,14 @@ session.send("test2");
 //			session.endDialog("都道府県ぐらい言ってほしいもんだ。");
 		}
     }
-])
-.matches('whois', [
+)
+.matches('whois', 
     function (session, args) {
 session.send("test3");
 //		session.endDialog("はじめまして僕はbot。名前はまだない。日本の天気に詳しいよ。");
 	}
-])
-.matches('replyHello', [
+)
+.matches('replyHello', 
     function (session, args) {
 session.send("test4");
 		var greet = builder.EntityRecognizer.findEntity(args.entities, 'Greetings');
@@ -122,8 +122,8 @@ session.send("test4");
 //			session.endDialog("ん？よ、よお。（。。。よくわからないけど挨拶っぽい）");
 		}
 	}
-])
-.matches('replyGoodBye', [
+)
+.matches('replyGoodBye', 
     function (session, args) {
 session.send("test5");
 		var greet = builder.EntityRecognizer.findEntity(args.entities, 'Greetings');
@@ -133,7 +133,7 @@ session.send("test5");
 //			session.endDialog("別れの挨拶を言われている気がする。ではまたね。");
 		}
 	}
-])
+)
 .onDefault(function (session) { session.send("日本語でok") });
 
 
