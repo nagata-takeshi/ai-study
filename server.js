@@ -16,30 +16,6 @@ intents.matches('isWeather',
 		var forecastResult = "";
 		var resultText = "";
 		var forecastArea = "";
-        if (city) {
-			forecastArea = city.entity.replace(/\s+/g,"");
-			forecast.get(forecastArea).then(function(forecast) {
-				if (day) {
-					if (day.entity == '明日' || day.entity == 'あした' || day.entity == 'あす') {
-						forecastResult = forecast.tomorrow.text;
-						resultText += '明日の';
-					} else if (day.entity == '今日' || day.entity == '本日' || day.entity == 'きょう') {
-						forecastResult = forecast.today.text;
-						resultText += '今日の';
-					} else {
-						session.endDialog("今日か明日の天気しかわかりませんが何か？万能じゃないんで。");
-					}
-					resultText += forecast.where + "の天気は" + forecastResult + "なんじゃない？あとは気象庁に聞いてくれ。";
-					session.endDialog(resultText);
-				} else {
-					session.endDialog("今日か明日くらい言ってくれてもいいんじゃない？");
-				}
-			}).catch(function(err) {
-				session.endDialog("何故か例外をキャッチしたよ。ぼく死ぬのかな？");
-			});
-		} else {
-			session.endDialog("都道府県ぐらい言ってほしいもんだ。");
-		}
     }
 )
 .onDefault(function (session) { session.endDialog("日本語でok") });
