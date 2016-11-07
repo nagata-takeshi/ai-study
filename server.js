@@ -1,7 +1,7 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 var request = require('request');
-var forecast = require('weather-yahoo-jp').forecast;
+ar forecast = require('weather-yahoo-jp').forecast;
 
 //=========================================================
 // Bot Setup
@@ -36,7 +36,7 @@ var intents = new builder.IntentDialog({
 //=========================================================
 // Bots Dialogs
 //=========================================================
-aaa
+
 // 初期ダイアログをintentDialogとして使用する
 intents.matches('isWeather',
     function (session, args) {
