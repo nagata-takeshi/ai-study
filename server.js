@@ -8,15 +8,4 @@ var recognizer = new builder.LuisRecognizer('https://api.projectoxford.ai/luis/v
 var intents = new builder.IntentDialog({ recognizers: [recognizer] });
 var bot = new builder.UniversalBot(connector);
 bot.dialog('/', intents);
-process.on('uncaughtException',function(err){session.endDialog('aaa');});
-intents.matches('isWeather',
-    function (session, args) {
-        var city = builder.EntityRecognizer.findEntity(args.entities, 'City');
-        var day = builder.EntityRecognizer.findEntity(args.entities, 'Day');
-		var forecastResult = "";
-		var resultText = "";
-		var forecastArea = "";
-    }
-)
-.onDefault(function (session) { session.endDialog("日本語でok") });
 
