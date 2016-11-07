@@ -42,7 +42,6 @@ bot.dialog('/', intents);
 
 intents.matches('isWeather',
     function (session, args) {
-session.send("test1");
         var city = builder.EntityRecognizer.findEntity(args.entities, 'City');
         var day = builder.EntityRecognizer.findEntity(args.entities, 'Day');
 		var forecastResult = "";
@@ -62,21 +61,20 @@ session.send("test1");
 						session.endDialog("今日か明日の天気しかわかりませんが何か？万能じゃないんで。");
 					}
 					resultText += forecast.where + "の天気は" + forecastResult + "なんじゃない？あとは気象庁に聞いてくれ。";
-//					session.endDialog(resultText);
+					session.endDialog(resultText);
 				} else {
-//					session.endDialog("今日か明日くらい言ってくれてもいいんじゃない？");
+					session.endDialog("今日か明日くらい言ってくれてもいいんじゃない？");
 				}
 			}).catch(function(err) {
-//				session.endDialog("何故か例外をキャッチしたよ。ぼく死ぬのかな？");
+				session.endDialog("何故か例外をキャッチしたよ。ぼく死ぬのかな？");
 			});
 		} else {
-//			session.endDialog("都道府県ぐらい言ってほしいもんだ。");
+			session.endDialog("都道府県ぐらい言ってほしいもんだ。");
 		}
     }
 )
 .matches('getWeather', 
     function (session, args) {
-session.send("test2");
         var city = builder.EntityRecognizer.findEntity(args.entities, 'City');
         var day = builder.EntityRecognizer.findEntity(args.entities, 'Day');
 		var forecastResult = "";
@@ -110,29 +108,26 @@ session.send("test2");
 )
 .matches('whois', 
     function (session, args) {
-session.send("test3");
-//		session.endDialog("はじめまして僕はbot。名前はまだない。日本の天気に詳しいよ。");
+		session.endDialog("はじめまして僕はbot。名前はまだない。日本の天気に詳しいよ。");
 	}
 )
 .matches('replyHello', 
     function (session, args) {
-session.send("test4");
 		var greet = builder.EntityRecognizer.findEntity(args.entities, 'Greetings');
 		if (greet) {
-//			session.endDialog(greet.entity.replace(/\s+/g,"") + "。");
+			session.endDialog(greet.entity.replace(/\s+/g,"") + "。");
 		} else {
-//			session.endDialog("ん？よ、よお。（。。。よくわからないけど挨拶っぽい）");
+			session.endDialog("ん？よ、よお。（。。。よくわからないけど挨拶っぽい）");
 		}
 	}
 )
 .matches('replyGoodBye', 
     function (session, args) {
-session.send("test5");
 		var greet = builder.EntityRecognizer.findEntity(args.entities, 'Greetings');
 		if (greet) {
-//			session.endDialog(greet.entity.replace(/\s+/g,"") + "。天気が知りたくなったらまた呼んでロボ。");
+			session.endDialog(greet.entity.replace(/\s+/g,"") + "。天気が知りたくなったらまた呼んでロボ。");
 		} else {
-//			session.endDialog("別れの挨拶を言われている気がする。ではまたね。");
+			session.endDialog("別れの挨拶を言われている気がする。ではまたね。");
 		}
 	}
 )
