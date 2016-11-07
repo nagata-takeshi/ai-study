@@ -36,7 +36,7 @@ var intents = new builder.IntentDialog({
 //=========================================================
 // Bots Dialogs
 //=========================================================
-
+aaa
 // 初期ダイアログをintentDialogとして使用する
 intents.matches('isWeather',
     function (session, args) {
